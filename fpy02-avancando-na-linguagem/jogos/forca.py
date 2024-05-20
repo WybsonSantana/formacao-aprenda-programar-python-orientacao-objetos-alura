@@ -9,6 +9,7 @@ def jogar():
     acertou_palavra = False
     enforcou = False
     erros = 0
+    maximo_de_tentativas = 6
 
     print(letras_acertadas)
 
@@ -24,8 +25,9 @@ def jogar():
                 index += 1
         else:
             erros += 1
+            print("Errou! Faltam {} tentativas.".format(maximo_de_tentativas - erros))
 
-        enforcou = erros == 6
+        enforcou = erros == maximo_de_tentativas
         acertou_palavra = "_" not in letras_acertadas
         print(letras_acertadas)
 
