@@ -1,4 +1,5 @@
 class Conta:
+
     def __init__(self, numero, titular, saldo, limite):
         self.__numero = numero
         self.__titular = titular
@@ -20,17 +21,22 @@ class Conta:
         self.sacar(valor)
         conta_destino.depositar(valor)
 
-    def get_numero(self):
+    @property
+    def numero(self):
         return self.__numero
 
-    def get_titular(self):
+    @property
+    def titular(self):
         return self.__titular
 
-    def get_saldo(self):
+    @property
+    def saldo(self):
         return self.__saldo
 
-    def get_limite(self):
+    @property
+    def limite(self):
         return self.__limite
 
-    def set_limite(self, novo_limite):
+    @limite.setter
+    def limite(self, novo_limite):
         self.__limite = novo_limite
