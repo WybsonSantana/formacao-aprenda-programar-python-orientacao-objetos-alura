@@ -26,6 +26,10 @@ class Conta:
         self.sacar(valor)
         conta_destino.depositar(valor)
 
+    @staticmethod
+    def codigos_do_bancos():
+        return {"BB": "001", "Caixa": "104", "Bradesco": "237", "Itaú": "341"}
+
     @property
     def numero(self):
         return self.__numero
