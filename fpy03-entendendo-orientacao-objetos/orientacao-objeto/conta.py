@@ -15,3 +15,7 @@ class Conta:
     def sacar(self, valor):
         self.__saldo -= valor
         print("Saque de R$ {:.2f} realizado com sucesso!".format(valor))
+
+    def transferir(self, valor, conta_destino):
+        self.sacar(valor)
+        conta_destino.depositar(valor)
