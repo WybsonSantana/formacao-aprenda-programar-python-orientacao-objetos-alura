@@ -35,9 +35,17 @@ class Filme(Programa):
         super().__init__(nome, ano)
         self._duracao = duracao
 
+    @property
+    def duracao(self):
+        return self._duracao
+
 
 class Serie(Programa):
 
     def __init__(self, nome, ano, temporadas):
         super().__init__(nome, ano)
         self._temporadas = temporadas
+
+    @property
+    def temporadas(self):
+        return self._temporadas
