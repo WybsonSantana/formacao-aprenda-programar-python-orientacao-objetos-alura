@@ -58,3 +58,13 @@ class Serie(Programa):
     @property
     def temporadas(self):
         return self._temporadas
+
+
+class Playlist:
+
+    def __init__(self, nome, programas):
+        self._nome = nome
+        self._programas = programas
+
+    def tamanho(self):
+        return len(self._programas)
