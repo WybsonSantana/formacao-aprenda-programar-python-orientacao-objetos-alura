@@ -5,8 +5,8 @@ class Programa:
         self._ano = ano
         self._likes = 0
 
-    def imprimir(self):
-        print(f'{self._nome} - {self._ano} - {self._likes} Like(s)')
+    def __str__(self):
+        return f'{self._nome} - {self._ano} - {self._likes} Like(s)'
 
     @property
     def nome(self):
@@ -38,8 +38,8 @@ class Filme(Programa):
         super().__init__(nome, ano)
         self._duracao = duracao
 
-    def imprimir(self):
-        print(f'{self._nome} - {self._ano} - {self._duracao} minuto(s) - {self._likes} Like(s)')
+    def __str__(self):
+        return f'{self._nome} - {self._ano} - {self._duracao} minuto(s) - {self._likes} Like(s)'
 
     @property
     def duracao(self):
@@ -52,8 +52,8 @@ class Serie(Programa):
         super().__init__(nome, ano)
         self._temporadas = temporadas
 
-    def imprimir(self):
-        print(f'{self._nome} - {self._ano} - {self._temporadas} temporada(s) - {self._likes} Like(s)')
+    def __str__(self):
+        return f'{self._nome} - {self._ano} - {self._temporadas} temporada(s) - {self._likes} Like(s)'
 
     @property
     def temporadas(self):

@@ -9,4 +9,4 @@ serie.like()
 filmes_e_series = [filme, serie]
 
 for programa in filmes_e_series:
-    programa.imprimir()
+    print(programa)
