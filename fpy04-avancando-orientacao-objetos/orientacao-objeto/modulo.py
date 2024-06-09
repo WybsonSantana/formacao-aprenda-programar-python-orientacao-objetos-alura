@@ -66,6 +66,9 @@ class Playlist:
         self._nome = nome
         self._programas = programas
 
+    def __getitem__(self, item):
+        return self._programas[item]
+
     @property
     def nome(self):
         return self._nome

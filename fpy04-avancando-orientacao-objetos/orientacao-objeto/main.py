@@ -27,5 +27,9 @@ playlist_fim_de_semana = Playlist('Fim de Semana', filmes_e_series)
 
 print(f'Tamanho da playlist: {playlist_fim_de_semana.tamanho}')
 
-for programa in playlist_fim_de_semana.listagem:
+for programa in playlist_fim_de_semana:
     print(programa)
+
+print(f'Primeiro item na playlist: {playlist_fim_de_semana[0]}')
+print(f'Atlanta está na playlist? {atlanta in playlist_fim_de_semana}')
+!
