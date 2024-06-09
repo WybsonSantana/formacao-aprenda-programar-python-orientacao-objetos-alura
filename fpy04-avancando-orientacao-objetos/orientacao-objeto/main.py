@@ -25,7 +25,7 @@ demolidor.like()
 filmes_e_series = [vingadores_guerra_infinita, atlanta, demolidor, todo_mundo_em_panico]
 playlist_fim_de_semana = Playlist('Fim de Semana', filmes_e_series)
 
-print(f'Tamanho da playlist: {len(playlist_fim_de_semana)}')
+print(f'Tamanho da playlist: {playlist_fim_de_semana.tamanho}')
 
-for programa in playlist_fim_de_semana:
+for programa in playlist_fim_de_semana.listagem:
     print(programa)
