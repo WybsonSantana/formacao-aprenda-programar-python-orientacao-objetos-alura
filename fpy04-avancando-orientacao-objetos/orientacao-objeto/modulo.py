@@ -60,11 +60,9 @@ class Serie(Programa):
         return self._temporadas
 
 
-class Playlist:
+class Playlist(list):
 
     def __init__(self, nome, programas):
+        super().__init__(programas)
         self._nome = nome
         self._programas = programas
-
-    def tamanho(self):
-        return len(self._programas)
