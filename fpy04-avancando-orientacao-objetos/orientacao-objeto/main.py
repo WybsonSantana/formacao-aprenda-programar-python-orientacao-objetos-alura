@@ -1,4 +1,4 @@
-from modulo import Filme, Serie, Playlist
+from modulo import Filme, Serie, Playlist, Junior, Pleno
 
 vingadores_guerra_infinita = Filme("Vingadores - Guerra Infinita", 2018, 160)
 todo_mundo_em_panico = Filme("Todo Mundo em Pânico", 1999, 100)
@@ -32,3 +32,14 @@ for programa in playlist_fim_de_semana:
 
 print(f'Primeiro item na playlist: {playlist_fim_de_semana[0]}')
 print(f'Atlanta está na playlist? {atlanta in playlist_fim_de_semana}')
+
+# Herança múltipla
+fulano = Junior('Fulano')
+fulano.busca_perguntas_sem_resposta()
+
+beltrano = Pleno('Beltrano')
+beltrano.busca_perguntas_sem_resposta()
+beltrano.busca_cursos_do_mes()
+beltrano.mostrar_tarefas()
+
+print(beltrano)
