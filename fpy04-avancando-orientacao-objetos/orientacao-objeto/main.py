@@ -25,11 +25,10 @@ demolidor.like()
 filmes_e_series = [vingadores_guerra_infinita, atlanta, demolidor, todo_mundo_em_panico]
 playlist_fim_de_semana = Playlist('Fim de Semana', filmes_e_series)
 
-print(f'Tamanho da playlist: {playlist_fim_de_semana.tamanho}')
+print(f'Tamanho da playlist: {len(playlist_fim_de_semana)}')
 
 for programa in playlist_fim_de_semana:
     print(programa)
 
 print(f'Primeiro item na playlist: {playlist_fim_de_semana[0]}')
 print(f'Atlanta está na playlist? {atlanta in playlist_fim_de_semana}')
-!
