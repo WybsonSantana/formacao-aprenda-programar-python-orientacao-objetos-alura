@@ -1,3 +1,6 @@
+from conta_corrente import ContaCorrente
+
+
 def faz_processamento_de_visualicacao(input_list=None):
     if input_list is None:
         input_list = list()
@@ -38,3 +41,33 @@ idades_maiores_que_21 = [idade for idade in idades if idade > 21]
 print(idades_maiores_que_21)
 
 faz_processamento_de_visualicacao()
+
+conta_do_fulano = ContaCorrente(15)
+print(conta_do_fulano)
+
+conta_do_fulano.deposita(500)
+print(conta_do_fulano)
+
+conta_do_beltrano = ContaCorrente(47685)
+conta_do_beltrano.deposita(1000)
+print(conta_do_beltrano)
+
+contas = [conta_do_fulano, conta_do_beltrano]
+for conta in contas:
+    print(conta)
+
+contas = [conta_do_fulano, conta_do_beltrano, conta_do_fulano]
+
+print(contas[0])
+
+conta_do_fulano.deposita(100)
+
+print(contas[0])
+
+print(conta_do_fulano)
+
+print(contas[2])
+
+contas[2].deposita(300)
+
+print(conta_do_fulano)
