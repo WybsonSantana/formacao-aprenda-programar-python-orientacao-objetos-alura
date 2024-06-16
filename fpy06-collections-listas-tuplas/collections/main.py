@@ -54,7 +54,7 @@ print(conta_do_beltrano)
 
 contas = [conta_do_fulano, conta_do_beltrano]
 for conta in contas:
-    print(conta)
+  print(conta)
 
 contas = [conta_do_fulano, conta_do_beltrano, conta_do_fulano]
 
@@ -71,3 +71,42 @@ print(contas[2])
 contas[2].deposita(300)
 
 print(conta_do_fulano)
+
+def deposita_para_todas(contas):
+  for conta in contas:
+    conta.deposita(100)
+
+contas = [conta_do_fulano, conta_do_beltrano]
+print(contas[0], contas[1])
+deposita_para_todas(contas)
+print(contas[0], contas[1])
+
+contas.insert(0,76)
+print(contas[0], contas[1], contas[2])
+
+deposita_para_todas(contas)
+print(contas[0], contas[1], contas[2])
+
+fulano = ('Fulano', 37, 1981) # tupla
+beltrano = ('Beltrano', 31, 1987)
+# ciclano = (39, 'Ciclano', 1979) # ruim
+
+fulano.append(6754)
+
+conta_do_fulano = (15, 1000)
+# conta_do_fulano.deposita() # variação OO
+conta_do_fulano[1]
+
+conta_do_fulano[1] += 100
+
+def deposita(conta): # variação "funcional"(separando o comportamento dos dados)
+  novo_saldo = conta[1] + 100
+  codigo = conta[0]
+  return (codigo, novo_saldo)
+
+deposita(conta_do_fulano)
+
+conta_do_fulano
+
+conta_do_fulano
+conta_do_fulano = deposita(conta_do_fulano)
