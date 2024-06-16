@@ -54,7 +54,7 @@ print(conta_do_beltrano)
 
 contas = [conta_do_fulano, conta_do_beltrano]
 for conta in contas:
-  print(conta)
+    print(conta)
 
 contas = [conta_do_fulano, conta_do_beltrano, conta_do_fulano]
 
@@ -72,22 +72,24 @@ contas[2].deposita(300)
 
 print(conta_do_fulano)
 
+
 def deposita_para_todas(contas):
-  for conta in contas:
-    conta.deposita(100)
+    for conta in contas:
+        conta.deposita(100)
+
 
 contas = [conta_do_fulano, conta_do_beltrano]
 print(contas[0], contas[1])
 deposita_para_todas(contas)
 print(contas[0], contas[1])
 
-contas.insert(0,76)
+contas.insert(0, 76)
 print(contas[0], contas[1], contas[2])
 
 deposita_para_todas(contas)
 print(contas[0], contas[1], contas[2])
 
-fulano = ('Fulano', 37, 1981) # tupla
+fulano = ('Fulano', 37, 1981)  # tupla
 beltrano = ('Beltrano', 31, 1987)
 # ciclano = (39, 'Ciclano', 1979) # ruim
 
@@ -99,14 +101,42 @@ conta_do_fulano[1]
 
 conta_do_fulano[1] += 100
 
-def deposita(conta): # variação "funcional"(separando o comportamento dos dados)
-  novo_saldo = conta[1] + 100
-  codigo = conta[0]
-  return (codigo, novo_saldo)
+
+def deposita(conta):  # variação "funcional"(separando o comportamento dos dados)
+    novo_saldo = conta[1] + 100
+    codigo = conta[0]
+    return (codigo, novo_saldo)
+
 
 deposita(conta_do_fulano)
 
 conta_do_fulano
 
-conta_do_fulano
 conta_do_fulano = deposita(conta_do_fulano)
+conta_do_fulano
+
+usuarios = [fulano, beltrano]
+print(usuarios)
+
+usuarios.append(('Paulo', 39, 1979))
+
+print(usuarios)
+
+usuarios[0][0] = 'Fulano de Tal'
+
+conta_do_fulano = ContaCorrente(15)
+conta_do_fulano.deposita(500)
+conta_do_beltrano = ContaCorrente(234876)
+conta_do_beltrano.deposita(1000)
+
+contas = (conta_do_fulano, conta_do_beltrano)
+
+for conta in contas:
+    print(conta)
+
+contas.append(423768)
+
+contas[0].deposita(300)
+
+for conta in contas:
+    print(conta)
