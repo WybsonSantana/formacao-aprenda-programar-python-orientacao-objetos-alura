@@ -7,6 +7,9 @@ class ExtratorURL:
         self.url = self.sanitizar_url(url)
         self.validar_url()
 
+    def __len__(self):
+        return len(self.url)
+
     def sanitizar_url(self, url):
         if type(url) == str:
             return url.strip()
