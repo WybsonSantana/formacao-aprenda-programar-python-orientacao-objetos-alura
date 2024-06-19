@@ -1,4 +1,4 @@
-from conta import ContaCorrente, ContaPoupanca
+from conta import ContaCorrente, ContaPoupanca, ContaSalario, Conta
 import array as arr
 import numpy as np
 
@@ -28,3 +28,12 @@ arr.array('d', [1, 3.5])
 numeros = np.array([1, 3.5])
 print(numeros)
 print(numeros + 3)
+
+conta1 = ContaSalario(37)
+conta2 = ContaCorrente(37)
+
+print(conta1 == conta2)
+
+isinstance(ContaCorrente(34), ContaCorrente)
+
+isinstance(ContaCorrente(34), Conta)
