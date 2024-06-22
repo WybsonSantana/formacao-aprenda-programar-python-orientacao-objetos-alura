@@ -1,4 +1,5 @@
-from collections import defaultdict
+from collections import defaultdict, Counter
+from conta import Conta
 
 usuarios_data_science = [15, 23, 43, 56]
 usuarios_machine_learning = [13, 23, 56, 42]
@@ -160,3 +161,27 @@ dicionario['Fulano']
 
 dicionario['Fulano'] = 15
 print(dicionario['Fulano'])
+
+aparicoes = defaultdict(int)
+
+for palavra in meu_texto.split():
+    aparicoes[palavra] += 1
+
+print(aparicoes)
+
+contas = defaultdict(Conta)
+
+contas[15]
+contas[17]
+contas[15]
+
+aparicoes = Counter()
+
+for palavra in meu_texto.split():
+    aparicoes[palavra] += 1
+
+print(aparicoes)
+
+aparicoes = Counter(meu_texto.split())
+
+print(aparicoes)
