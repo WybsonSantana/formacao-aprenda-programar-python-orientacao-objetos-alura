@@ -19,7 +19,7 @@ usuarios_machine_learning = {13, 23, 56, 42}
 
 print(usuarios_machine_learning)
 
-#print(usuarios_machine_learning[3])
+# print(usuarios_machine_learning[3])
 
 for usuario in set(assistiram):
     print(usuario)
@@ -28,3 +28,15 @@ usuarios_data_science = {15, 23, 43, 56}
 usuarios_machine_learning = {13, 23, 56, 42}
 
 print(usuarios_data_science | usuarios_machine_learning)
+
+print(usuarios_data_science & usuarios_machine_learning)
+
+print(usuarios_data_science - usuarios_machine_learning)
+
+fez_ds_mas_nao_fez_ml = usuarios_data_science - usuarios_machine_learning
+
+print(15 in fez_ds_mas_nao_fez_ml)
+
+print(23 in fez_ds_mas_nao_fez_ml)
+
+print(usuarios_data_science ^ usuarios_machine_learning)
