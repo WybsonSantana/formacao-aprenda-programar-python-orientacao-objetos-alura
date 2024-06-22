@@ -1,4 +1,5 @@
 from abc import ABCMeta, abstractmethod
+from functools import total_ordering
 
 
 class Conta(metaclass=ABCMeta):
@@ -42,6 +43,7 @@ class ContaInvestimento(Conta):
 ContaInvestimento(764)
 
 
+@total_ordering
 class ContaSalario:
 
     def __init__(self, codigo):
@@ -55,7 +57,10 @@ class ContaSalario:
         return self._codigo == outro._codigo and self._saldo == outro._saldo
 
     def __lt__(self, outro):
-        return self._saldo < outro._saldo
+        if self._saldo != outro._saldo:
+            return self._saldo < outro._saldo
+
+        return self._codigo < outro._codigo
 
     def depositar(self, valor):
         self._saldo += valor
