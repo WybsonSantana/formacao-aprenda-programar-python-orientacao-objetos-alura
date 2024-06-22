@@ -96,20 +96,12 @@ conta_do_ciclano.depositar(510)
 
 contas = [conta_do_fulano, conta_do_beltrano, conta_do_ciclano]
 
-for conta in contas:
-    print(conta)
-
-sorted(contas)
-
 print(conta_do_fulano < conta_do_beltrano)
 
+print(conta_do_fulano > conta_do_beltrano)
 
-def extrai_saldo(conta):
-    return conta._saldo
-
-
-for conta in sorted(contas, key=extrai_saldo):
+for conta in sorted(contas):
     print(conta)
 
-for conta in sorted(contas, key=attrgetter("_saldo")):
+for conta in sorted(contas, reverse=True):
     print(conta)
