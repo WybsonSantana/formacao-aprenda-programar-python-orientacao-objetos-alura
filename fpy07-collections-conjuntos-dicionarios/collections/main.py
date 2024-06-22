@@ -63,3 +63,32 @@ meu_texto = 'Bem vindo meu nome é Fulano eu gosto muito de nomes e tenho o meu 
 print(meu_texto.split())
 
 print(set(meu_texto.split()))
+
+aparicoes = {
+    'Fulano': 1,
+    'cachorro': 2,
+    'nome': 2,
+    'vindo': 1
+}
+
+print(type(aparicoes))
+
+print(aparicoes['Fulano'])
+
+print(aparicoes['cachorro'])
+
+# print(aparicoes['xpto'])
+
+print(aparicoes.get('xpto', 0))
+
+print(aparicoes.get('cachorro', 0))
+
+aparicoes = dict(Fulano=2, cachorro=1)
+print(aparicoes)
+
+aparicoes = {
+    'Fulano': 1,
+    'cachorro': 2,
+    'nome': 2,
+    'vindo': 1
+}
