@@ -1,3 +1,5 @@
+from collections import defaultdict
+
 usuarios_data_science = [15, 23, 43, 56]
 usuarios_machine_learning = [13, 23, 56, 42]
 
@@ -131,3 +133,30 @@ for chave, valor in aparicoes.items():
     print(chave, '=', valor)
 
 print(["palavra {}".format(chave) for chave in aparicoes.keys()])
+
+meu_texto = 'bem vindo meu nome é Fulano eu gosto muito de nomes e tenho o meu cachorro e gosto muito de cachorro'
+meu_texto = meu_texto.lower()
+
+aparicoes = {}
+
+for palavra in meu_texto.split():
+    ate_agora = aparicoes.get(palavra, 0)
+    aparicoes[palavra] = ate_agora + 1
+
+print(aparicoes)
+
+aparicoes = defaultdict(int)
+
+for palavra in meu_texto.split():
+    ate_agora = aparicoes[palavra]
+    aparicoes[palavra] = ate_agora + 1
+
+print(aparicoes)
+
+int()
+
+dicionario = defaultdict(int)
+dicionario['Fulano']
+
+dicionario['Fulano'] = 15
+print(dicionario['Fulano'])
