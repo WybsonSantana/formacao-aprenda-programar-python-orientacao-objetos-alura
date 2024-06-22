@@ -1,4 +1,5 @@
 from conta import ContaCorrente, ContaPoupanca, ContaSalario, Conta
+from operator import attrgetter
 import array as arr
 import numpy as np
 
@@ -83,3 +84,32 @@ print(idades)
 idades.sort()
 
 print(idades)
+
+conta_do_fulano = ContaSalario(17)
+conta_do_fulano.depositar(500)
+
+conta_do_beltrano = ContaSalario(3)
+conta_do_beltrano.depositar(1000)
+
+conta_do_ciclano = ContaSalario(133)
+conta_do_ciclano.depositar(510)
+
+contas = [conta_do_fulano, conta_do_beltrano, conta_do_ciclano]
+
+for conta in contas:
+    print(conta)
+
+sorted(contas)
+
+print(conta_do_fulano < conta_do_beltrano)
+
+
+def extrai_saldo(conta):
+    return conta._saldo
+
+
+for conta in sorted(contas, key=extrai_saldo):
+    print(conta)
+
+for conta in sorted(contas, key=attrgetter("_saldo")):
+    print(conta)
