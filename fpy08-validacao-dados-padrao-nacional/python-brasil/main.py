@@ -1,7 +1,7 @@
-from cpf_cnpj import CpfCnpj
+from cpf_cnpj import Documento
 
-cpf = CpfCnpj(12345678909, 'cpf')
-cnpj = CpfCnpj(35379838000112, 'cnpj')
+cpf = Documento.criar_documento(12345678909)
+cnpj = Documento.criar_documento(35379838000112)
 
 print(cpf)
 print(cnpj)
