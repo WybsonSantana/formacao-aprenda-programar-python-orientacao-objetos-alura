@@ -1,4 +1,4 @@
-from validate_docbr import CPF
+from cpf import Cpf
 
-cpf = CPF()
-print(cpf.validate('12345678909'))
+cpf = Cpf(12345678909)
+print(cpf)
