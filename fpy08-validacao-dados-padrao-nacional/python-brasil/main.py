@@ -1,7 +1,13 @@
-from cpf_cnpj import Documento
+import re
 
-cpf = Documento.criar_documento(12345678909)
-cnpj = Documento.criar_documento(35379838000112)
+padrao = '[0-9][a-z]{2}[0-9]'
+texto = '123 1ac2 1cc aa1'
+resposta = re.search(padrao, texto)
 
-print(cpf)
-print(cnpj)
+print(resposta.group())
+
+padrao = '\\w{5,50}@[a-z]{3,10}.com.br'
+texto = 'aaabbbcc rodrigo123@gmail.com.br'
+resposta = re.search(padrao, texto)
+
+print(resposta.group())
