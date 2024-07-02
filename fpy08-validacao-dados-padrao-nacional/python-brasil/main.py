@@ -1,6 +1,5 @@
-from telefones_br import TelefonesBr
+from datas_br import DatasBr
 
-telefone = '552126481234'
-
-telefone_objeto = TelefonesBr(telefone)
-print(telefone_objeto)
+cadastro = DatasBr()
+print(cadastro.dia_semana())
+print(cadastro.mes_cadastro())
