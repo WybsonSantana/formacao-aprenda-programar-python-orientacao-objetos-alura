@@ -1,11 +1,6 @@
-from datas_br import DatasBr
+from acesso_cep import BuscaEndereco
 
-cadastro = DatasBr()
-print(cadastro.dia_semana())
-print(cadastro.mes_cadastro())
+cep = 25870145
+objeto_cep = BuscaEndereco(cep)
 
-print(cadastro)
-
-
-hoje = DatasBr()
-print(hoje.tempo_cadastro())
+print(objeto_cep)
